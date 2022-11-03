@@ -58,3 +58,12 @@ model.fit(X, y, epochs=150, batch_size=10)
 #The model will always have some error, 
 #but the amount of error will level out after some point for a given model configuration. 
 #This is called model convergence
+...
+#Evaluate the Keras model
+...
+_, accuracy = model.evaluate(X, y)
+print('Accuracy: %.2f' % (accuracy*100))
+#trained our neural network on the entire dataset, and you can evaluate the performance of the network on the same dataset.
+#This will only give you an idea of how well you have modeled the dataset (e.g., train accuracy)
+#BUT no idea of how well the algorithm might perform on new data
+#Ideally, you could separate your data into train and test datasets for training and evaluation of your model.
