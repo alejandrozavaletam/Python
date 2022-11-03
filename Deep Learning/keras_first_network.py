@@ -37,3 +37,24 @@ model.add(Dense(1, activation='sigmoid')) #One Output layer with the activation 
 #To collect and report the classification accuracy defined "via the metrics" argument.
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 ...
+...
+# fit the keras model on the dataset
+model.fit(X, y, epochs=150, batch_size=10)
+#Brief theory explication:
+
+#EPOCHS: One pass(cycle) through all of the rows in the training dataset .
+#BATCH_SIZE: One or more samples (data) considered by the model within an epoch before weights are updated.
+#NOTE:One epoch comprises one or more batches, based on the chosen batch size, and the model is fit for many epochs
+
+#The training process will run for a fixed number of epochs (iterations).
+#Through the dataset that you must specify using the "epochs argument"
+
+#Set the number of dataset rows that are considered 
+#before the model weights are updated within each epoch, called the "batch size", 
+#and set using the batch_size argument.
+
+#This can be chosen experimentally by trial and error.
+#train the model enough so that it learns a good (or good enough) mapping of rows of input data to the output classification.
+#The model will always have some error, 
+#but the amount of error will level out after some point for a given model configuration. 
+#This is called model convergence
