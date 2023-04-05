@@ -39,7 +39,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 ...
 ...
 # fit the keras model on the dataset
-model.fit(X, y, epochs=150, batch_size=10)
+model.fit(X, y, epochs=150, batch_size=10, verbose=0)
 #Brief theory explication:
 
 #EPOCHS: One pass(cycle) through all of the rows in the training dataset .
