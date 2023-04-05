@@ -65,5 +65,9 @@ _, accuracy = model.evaluate(X, y)
 print('Accuracy: %.2f' % (accuracy*100))
 #trained our neural network on the entire dataset, and you can evaluate the performance of the network on the same dataset.
 #This will only give you an idea of how well you have modeled the dataset (e.g., train accuracy)
-#BUT no idea of how well the algorithm might perform on new data
+#BUT no idea of how well the algorithm MIGHT PERFOM ON NEW DATA
 #Ideally, you could separate your data into train and test datasets for training and evaluation of your model.
+#The evaluate() function will return a list with two values:
+# 1) first will be the loss of the model on the dataset.
+# 2) the second will be the accuracy of the model.
+# only interested in reporting the accuracy
